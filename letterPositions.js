@@ -1,6 +1,15 @@
 const letterPositions = function(sentence) {
   const results = {};
-  //return index array for each instance of character
+  for (let index in sentence) {
+    let letter = sentence[index];
+    if (letter !== " ") {
+      if (!results[letter]) {
+        results[letter] = [Number(index)];
+      } else {
+        results[letter].push(Number(index));
+      }
+    }
+  }
   return results;
 };
 
@@ -19,3 +28,9 @@ const assertArraysEqual = function(array1, array2) {
     console.log(`❌ ${array1} and ${array2} are not equal!`);
   }
 }
+
+console.log(letterPositions("hello"));
+assertArraysEqual(letterPositions("hello")["h"], [0]);
+assertArraysEqual(letterPositions("hello")["e"], [1]);
+assertArraysEqual(letterPositions("hello")["l"], [2, 3]);
+assertArraysEqual(letterPositions("hello")["o"], [4]);
