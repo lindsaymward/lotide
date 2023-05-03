@@ -29,8 +29,10 @@ const assertArraysEqual = function(array1, array2) {
   }
 }
 
-console.log(letterPositions("hello"));
+console.log(letterPositions("hi there"));
 assertArraysEqual(letterPositions("hello")["h"], [0]);
 assertArraysEqual(letterPositions("hello")["e"], [1]);
 assertArraysEqual(letterPositions("hello")["l"], [2, 3]);
 assertArraysEqual(letterPositions("hello")["o"], [4]);
+
+assertArraysEqual(letterPositions("hi there")["t"], [3]);
