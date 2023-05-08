@@ -37,3 +37,4 @@ The following functions are currently implemented:
 * `findKeyByValue(...)`: Takes in an object and a value. It should scan the object and return the first key that has that value. If no key exists with that value, return undefined.
 * `map(...)`: Takes in an array and a callback function. Returns a new array based on the results of the callback.
 * `takeUntil(...)`: Takes in an array and a calllback function. Returns new array with values up until the callback requirement.
+* `flatten(...)`: Takes in an array with nested arrays and returns a single level array with all the values.
